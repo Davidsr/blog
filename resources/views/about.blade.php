@@ -55,7 +55,12 @@
     <body>
         <div class="flex-center position-ref full-height">
             <div class="content">
-                About Us
+                About Us {{$name}} {{$test}}
+                <ul>
+                @foreach($datos as $dato):
+                    <li>{{$dato}}</li>
+                @endforeach
+                </ul>
             </div>
         </div>
     </body>

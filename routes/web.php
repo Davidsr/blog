@@ -16,5 +16,18 @@ Route::get('/', function () {
 });
 
 Route::get('about', function () {
-    return view('about');
+    //return view('about')->with('name', 'David');
+    /*
+    return view('about',[
+    		'name' => 'David'
+    ]);
+    */
+    $name = 'David';
+    $test = 'Saldana';
+    $datos = array( 1, 2, 3);
+
+    $tareas = DB::table('tareas')->get();
+
+    return $tareas;
+    return view('about', compact('name', 'test', 'datos'));
 });
