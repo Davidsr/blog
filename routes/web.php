@@ -28,6 +28,5 @@ Route::get('about', function () {
 
     $tareas = DB::table('tareas')->get();
 
-    return $tareas;
-    return view('about', compact('name', 'test', 'datos'));
+    return view('about', compact('name', 'test', 'datos', 'tareas'));
 });

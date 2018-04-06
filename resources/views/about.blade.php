@@ -61,6 +61,12 @@
                     <li>{{$dato}}</li>
                 @endforeach
                 </ul>
+                <p>Tareas</p>
+                <ul>
+                @foreach($tareas as $tarea):
+                    <li>{{$tarea->body}} <small>{{$tarea->created_at}}</small></li>
+                @endforeach
+                </ul>
             </div>
         </div>
     </body>
