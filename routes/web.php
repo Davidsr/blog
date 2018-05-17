@@ -30,3 +30,10 @@ Route::get('about', function () {
 
     return view('about', compact('name', 'test', 'datos', 'tareas'));
 });
+
+Route::get('tareas', 'TareasController@index');
+Route::get('/tareas/{tarea}', function($id){
+    $tarea = App\Tarea::find($id);
+    //dd($task);
+    return view('tareas.show', compact('tarea'));
+});
