@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-OMG
+	<div class="container">
+		@include('posts/post')
+	</div>
 @endsection('content')

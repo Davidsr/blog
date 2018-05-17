@@ -9,12 +9,20 @@ class PostsController extends Controller
 {
     public function index()
     {
-    	return view('posts.index');
+    	//$posts = Post::all();
+    	// Para obtener los post ordenador por fecha de creacion descendente
+    	$posts = Post::latest()->get();
+
+    	return view('posts.index', compact('posts'));
     }
 
-    public function show($id)
+    public function show(Post $post)//$id) // la variable post debe llamarse igual a la variable en route
     {
-    	return view('posts.show');
+    	// La primer forma es buscar el post con $id
+    	//$post = Post::find($id);
+
+    	// La segunda forma es pasar un objeto model de post
+    	return view('posts.show', compact('post'));
     }
 
     public function create()
