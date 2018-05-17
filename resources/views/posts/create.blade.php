@@ -7,6 +7,7 @@
 	<hr>
 	<form method="post" action="/posts">
 		@csrf
+		@include('layouts.errors')
 		<div class="form-group">
 			<label for="titulo">Titulo</label>
 			<input type="text" class="form-control" id="titulo" name="titulo" aria-describedby="titulo" placeholder="titulo...">

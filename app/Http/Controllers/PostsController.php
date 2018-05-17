@@ -26,7 +26,13 @@ class PostsController extends Controller
     {
     	// Debug request
     	//dd($request->all());
-    	/*
+
+    	// Validar el "formulario" datos del request
+    	$request->validate([
+    		'titulo' => 'required',
+    		'mensaje' => 'required'
+    	]);
+    	
     	$post = new Post;
 
     	// Obtener datos del formulario
@@ -37,12 +43,14 @@ class PostsController extends Controller
 
     	// Guardar en la base de datos
     	$post->save();
-    	*/
+    	
     	// Se debe permitir el llenado masivo de los campos en Model Post
+    	/*
     	Post::create([
     		'titulo' => $request->titulo,
     		'mensaje' => $request->mensaje
     	]);
+    	*/
 
     	// Regresar a la pagina principal
     	return view('posts.index');
