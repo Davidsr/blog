@@ -32,8 +32,13 @@ Route::get('about', function () {
 });
 
 Route::get('tareas', 'TareasController@index');
+Route::get('/tareas/{tarea}', 'TareasController@show');
+/*
 Route::get('/tareas/{tarea}', function($id){
     $tarea = App\Tarea::find($id);
     //dd($task);
     return view('tareas.show', compact('tarea'));
 });
+*/
+Route::get('posts', 'PostsController@index');
+Route::get('posts/{post}', 'PostsController@show');

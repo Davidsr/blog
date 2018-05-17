@@ -12,13 +12,12 @@ class Tarea extends Model
     	return false;
     }
     */
-
+/*
     public static function incompleta(){
     	return static::where('completed',0)->get();
     }
-/*
+*/
     public function scopeIncompleta($query){
     	return $query->where('completed', 0);
     }
-  */
 }

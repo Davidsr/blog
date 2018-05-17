@@ -48,7 +48,7 @@ class TareasController extends Controller
      */
     public function show(Tarea $tarea)
     {
-        //
+        return view('tareas.show', compact('tarea'));
     }
 
     /**
